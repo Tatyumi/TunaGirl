@@ -14,4 +14,13 @@ namespace Common
         /// <summary>ゲームオーバーシーン名</summary>
         public const string GAME_OVER_SCENE= "GameOverScene";
     }
+
+    // タグ名
+    public class TagName
+    {
+        /// <summary>ターゲットタグ名</summary>
+        public const string TARGET_TAG = "Target";
+        /// <summary>エネミータグ名</summary>
+        public const string ENEMY_TAG = "Enemy";
+    }
 }
