@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
             {
                 // ゲーム終了処理
                 obj.KillPlayer();
-                Debug.Log("いてー");
             }
         }
     }
