@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public sealed class KurageController : EnemyController {
+public sealed class KurageController : EnemyController,IMovableScene {
 
     /// <summary>移動速度</summary>
     private const float moveSpeed = 2.0f;
@@ -15,5 +16,14 @@ public sealed class KurageController : EnemyController {
 
         // 画面外か判別
         base.CheckOffScreen(this.transform.localPosition.x);
+    }
+
+    /// <summary>
+    /// シーン遷移
+    /// </summary>
+    public void MoveScene()
+    {
+        //ゲームオーバ画面に遷移
+        SceneManager.LoadScene("");
     }
 }
