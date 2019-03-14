@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NetGenerator : MonoBehaviour
 {
@@ -14,12 +12,14 @@ public class NetGenerator : MonoBehaviour
     private float delta = 0.0f;
     /// <summary>ネットプレファブのY座標</summary>
     private float NetPositionY;
+
     // Use this for initialization
     void Start()
     {
         // ネット画像の上辺が画面上と重なるよう計算
         NetPositionY = (Screen.height / 2) - NetPrefab.GetComponent<RectTransform>().sizeDelta.y / 2;
     }
+
     // Update is called once per frame
     void Update()
     {
