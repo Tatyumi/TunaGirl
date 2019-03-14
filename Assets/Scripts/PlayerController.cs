@@ -15,6 +15,14 @@ public class PlayerController : MonoBehaviour
         gameDirector = GameDirector.GetComponent<GameDirector>();
     }
 
+    private void Start()
+    {
+
+        // 初期位置
+        this.transform.localPosition =
+            new Vector2((Screen.width / 2) * -1 + this.gameObject.GetComponent<RectTransform>().sizeDelta.x / 2, 0);
+    }
+
     void Update()
     {
         // キーボードの↑キーが押されているか判別
@@ -39,7 +47,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // TargetTunaに衝突した場合
-        if(other.gameObject.tag == TagName.TARGET_TAG)
+        if (other.gameObject.tag == TagName.TARGET_TAG)
         {
             // GameClearシーンに遷移する
             gameDirector.ClearGame();

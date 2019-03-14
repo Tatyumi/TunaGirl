@@ -5,6 +5,13 @@ public class TargetTunaController : MonoBehaviour
     /// <summary>移動速度</summary>
     private const float moveSpeed = 0.2f;
 
+    private void Start()
+    {
+        // 初期位置
+        this.transform.localPosition = new Vector2(Screen.width / 2, 0);
+    }
+
+
     void Update()
     {
         //少しずつ左に移動
