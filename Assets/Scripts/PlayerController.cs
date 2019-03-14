@@ -1,15 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Common;
 
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>ゲームディレクターオブジェクト</summary>
+    public GameObject GameDirector;
     /// <summary>移動速度</summary>
     private const float moveSpeed = 7.0f;
+    /// <summary>ゲームディレクター</summary>
+    private GameDirector gameDirector;
+
+    private void Awake()
+    {
+        gameDirector = GameDirector.GetComponent<GameDirector>();
+    }
 
     void Update()
     {
-
         // キーボードの↑キーが押されているか判別
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -32,16 +39,16 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // TargetTunaに衝突した場合
-        if(other.gameObject.tag == "Target")
+        if(other.gameObject.tag == TagName.TARGET_TAG)
         {
             // GameClearシーンに遷移する
-            Debug.Log("クリア");
+            gameDirector.ClearGame();
 
         }
         else
         {
             // 各敵キャラのゲームオーバー処理を行う
-            Debug.Log("いたい");
+            gameDirector.FailGame();
         }
     }
 
