@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using Common;
 
-public class NetController : EnemyController
+public class NetController : EnemyController,IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 20.0f;
@@ -14,5 +16,14 @@ public class NetController : EnemyController
         // 画面外か判別
         base.CheckOffScreen(this.transform.localPosition.x);
 
+    }
+
+    /// <summary>
+    /// ゲーム終了処理
+    /// </summary>
+    public void KillPlayer()
+    {
+        base.DetectAttackEnemy((int)EnemyCategory.Net);
+        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

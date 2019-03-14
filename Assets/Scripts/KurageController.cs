@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using Common;
 
-public sealed class KurageController : EnemyController
+public sealed class KurageController : EnemyController,IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 2.0f;
@@ -15,4 +17,12 @@ public sealed class KurageController : EnemyController
         base.CheckOffScreen(this.transform.localPosition.x);
     }
 
+    /// <summary>
+    /// ゲーム終了処理
+    /// </summary>
+    public void KillPlayer()
+    {
+        base.DetectAttackEnemy((int)EnemyCategory.Kurage);
+        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
+    }
 }

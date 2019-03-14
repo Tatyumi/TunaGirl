@@ -11,12 +11,4 @@ public class GameDirector : MonoBehaviour
     {
         SceneManager.LoadScene(SceneName.GAME_CLEAR_SCENE);
     }
-
-    /// <summary>
-    /// ゲーム失敗処理
-    /// </summary>
-    public void FailGame()
-    {
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
-    }
 }

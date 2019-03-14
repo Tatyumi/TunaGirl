@@ -55,9 +55,15 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // 各敵キャラのゲームオーバー処理を行う
-            gameDirector.FailGame();
+            var obj = other.gameObject.GetComponent<IKillablePlayer>();
+
+            // 存在チェック
+            if (obj != null)
+            {
+                // ゲーム終了処理
+                obj.KillPlayer();
+                Debug.Log("いてー");
+            }
         }
     }
-
 }
