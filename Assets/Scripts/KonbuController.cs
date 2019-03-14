@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public sealed class KonbuController : EnemyController
 {
-
     /// <summary>移動速度</summary>
     private const float moveSpeed = 10.0f;
 
@@ -16,5 +13,4 @@ public sealed class KonbuController : EnemyController
         // 画面外か判別
         base.CheckOffScreen(this.transform.localPosition.x);
     }
-
 }
