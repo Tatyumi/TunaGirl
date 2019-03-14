@@ -15,9 +15,14 @@ public class KurageGenerator : MonoBehaviour
     private int maxKuaregePositionY = 0;
     /// <summary>生成時のクラゲの最小Y座標</summary>
     private int minKuaregePositionY = 0;
+    /// <summary>クラゲプレファブ生成時のX座標</summary>
+    private float kuragePositionX;
 
     void Start()
     {
+        // 画面右端の座標を取得
+        kuragePositionX = Screen.width / 2;
+
         // クラゲ生成時のY座標を代入
         maxKuaregePositionY = Screen.height / 2 - 100;
         minKuaregePositionY = (Screen.height / 2 -100) * -1;
@@ -41,7 +46,7 @@ public class KurageGenerator : MonoBehaviour
             int kuragePositionY = Random.Range(minKuaregePositionY, maxKuaregePositionY);
 
             // プレファブを生成
-            gameObject.transform.localPosition = new Vector2(Screen.width, kuragePositionY);
+            gameObject.transform.localPosition = new Vector2(kuragePositionX, kuragePositionY);
         }
     }
 }

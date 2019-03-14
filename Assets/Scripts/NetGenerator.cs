@@ -10,12 +10,17 @@ public class NetGenerator : MonoBehaviour
     private float span = 15.0f;
     /// <summary></summary>
     private float delta = 0.0f;
+    /// <summary>ネットプレファブのX座標</summary>
+    private float NetPositionX;
     /// <summary>ネットプレファブのY座標</summary>
     private float NetPositionY;
 
     // Use this for initialization
     void Start()
     {
+        // 画面右端の座標を取得
+        NetPositionX = Screen.width / 2;
+
         // ネット画像の上辺が画面上と重なるよう計算
         NetPositionY = (Screen.height / 2) - NetPrefab.GetComponent<RectTransform>().sizeDelta.y / 2;
     }
@@ -35,7 +40,7 @@ public class NetGenerator : MonoBehaviour
             gameObject.transform.SetParent(Canvas.transform, false);
 
             // プレファブを生成
-            gameObject.transform.localPosition = new Vector2(Screen.width, NetPositionY);
+            gameObject.transform.localPosition = new Vector2(NetPositionX, NetPositionY);
         }
     }
 }
