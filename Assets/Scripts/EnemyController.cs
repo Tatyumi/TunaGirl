@@ -29,4 +29,13 @@ public class EnemyController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    /// <summary>
+    /// プレイヤーに衝突した敵キャラを検出
+    /// </summary>
+    /// <param name="category">敵キャラのカテゴリ</param>
+    protected void DetectAttackEnemy(int category)
+    {
+        AttackEnemy = category;
+    }
 }
