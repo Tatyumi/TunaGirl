@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using Common;
 
 public class GameOverDirector : MonoBehaviour
 {
@@ -21,6 +21,16 @@ public class GameOverDirector : MonoBehaviour
 
         // ゲームオーバー演出の表示
         ActiveGameOverPerformance(EnemyController.AttackEnemy);
+    }
+
+    void Update()
+    {
+        // 画面がタップされた場合
+        if (Input.GetMouseButtonDown(0))
+        {
+            // ゲームシーンに移動
+            SceneManager.LoadScene(SceneName.TITLE_SCENE);
+        }
     }
 
     /// <summary>
