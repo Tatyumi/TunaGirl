@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
     /// <param name="other">衝突したオブジェクト</param>
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // BGMの停止
+        gameDirector.audioManager.StopSound();
+
         // TargetTunaに衝突した場合
         if (other.gameObject.tag == TagName.TARGET_TAG)
         {

@@ -17,6 +17,15 @@ public class GameDirector : MonoBehaviour
     /// <summary>チュートリアルパネルオブジェクト</summary>
     public GameObject TutorialPanel;
 
+    /// <summary>オーディオソース</summary>
+    public AudioManager audioManager;
+
+    private void Awake()
+    {
+        // オーディオマネージャー取得
+        audioManager = GameObject.Find(ObjectName.AUDIO_MANAGER).GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         OnTutorialMode();
@@ -27,6 +36,7 @@ public class GameDirector : MonoBehaviour
     /// </summary>
     public void ClearGame()
     {
+        // ゲームクリアシーンに遷移
         SceneManager.LoadScene(SceneName.GAME_CLEAR_SCENE);
     }
 
@@ -35,7 +45,6 @@ public class GameDirector : MonoBehaviour
     /// </summary>
     public void OnTutorialMode()
     {
-        // オブジェクト
         TunaGirl.SetActive(false);
         TunaBoy.SetActive(false);
         KonbuGenerator.SetActive(false);
@@ -50,6 +59,9 @@ public class GameDirector : MonoBehaviour
     /// </summary>
     public void GameStart()
     {
+        // BGM再生
+        audioManager.PlaySound(AudioName.GAME_SCENE_BGM);
+
         TunaGirl.SetActive(true);
         TunaBoy.SetActive(true);
         KonbuGenerator.SetActive(true);

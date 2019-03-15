@@ -11,9 +11,21 @@ public class GameOverDirector : MonoBehaviour
     /// <summary>ネットによるゲームオーバーオブジェクト</summary>
     public GameObject NetGameOver;
 
+    /// <summary>オーディオソース</summary>
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        // オーディオマネージャー取得
+        audioManager = GameObject.Find(ObjectName.AUDIO_MANAGER).GetComponent<AudioManager>();
+    }
+
     // Use this for initialization
     void Start()
     {
+        // BGM再生
+        audioManager.PlaySound(AudioName.GAME_OVER_SCENE_BGM);
+
         // ゲームオーバ演出を全て非表示
         KurageGameOver.SetActive(false);
         KonbuGameOver.SetActive(false);
@@ -21,6 +33,7 @@ public class GameOverDirector : MonoBehaviour
 
         // ゲームオーバー演出の表示
         ActiveGameOverPerformance(EnemyController.AttackEnemy);
+
     }
 
     void Update()
@@ -28,6 +41,9 @@ public class GameOverDirector : MonoBehaviour
         // 画面がタップされた場合
         if (Input.GetMouseButtonDown(0))
         {
+            // BGM停止
+            audioManager.StopSound();
+
             // ゲームシーンに移動
             SceneManager.LoadScene(SceneName.TITLE_SCENE);
         }
