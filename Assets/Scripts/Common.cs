@@ -33,12 +33,14 @@ namespace Common
         public const string GAME_SCENE_BGM = "GameSceneBGM";
         /// <summary>ゲームオーバーシーンBGM名</summary>
         public const string GAME_OVER_SCENE_BGM = "GameOverSceneBGM";
-        /// <summary>ゲームクリアシーンBGM</summary>
+        /// <summary>ゲームクリアシーンBGM名</summary>
         public const string GAME_CLEAR_SCENE_BGM = "GameClearSceneBGM";
-        /// <summary>チュートリアルBGM</summary>
+        /// <summary>チュートリアルBGM名</summary>
         public const string TUTORIAL_BGM = "TutorialBGM";
-        /// <summary>ボタンSE</summary>
+        /// <summary>ボタンSE名</summary>
         public const string BUTTON_SE = "ButtonSE";
+        /// <summary>クラゲSE名</summary>
+        public const string KURAGE_SE = "KurageSE";
     }
 
     // オブジェクト名

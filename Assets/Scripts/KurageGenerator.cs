@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using Common;
 
 public class KurageGenerator : MonoBehaviour
 {
-
+    /// <summary>ゲームディレクターオブジェクト</summary>
+    public GameObject GameDirector;
     /// <summary>キャンバス</summary>
     public GameObject Canvas;
     /// <summary>クラゲプレファブ </summary>
@@ -17,6 +19,13 @@ public class KurageGenerator : MonoBehaviour
     private int minKuaregePositionY = 0;
     /// <summary>クラゲプレファブ生成時のX座標</summary>
     private float kuragePositionX;
+    /// <summary>ゲームディレクター</summary>
+    private GameDirector gameDirector;
+
+    void Awake()
+    {
+        gameDirector = GameDirector.GetComponent<GameDirector>();
+    }
 
     void Start()
     {
@@ -47,6 +56,9 @@ public class KurageGenerator : MonoBehaviour
 
             // プレファブを生成
             gameObject.transform.localPosition = new Vector2(kuragePositionX, kuragePositionY);
+
+            // クラゲ生成時のSeを再生
+            gameDirector.audioManager.PlaySound(AudioName.KURAGE_SE);
         }
     }
 }

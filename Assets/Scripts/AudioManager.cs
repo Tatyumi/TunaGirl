@@ -16,6 +16,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip TutorialBGM;
     /// <summary>ボタンSE</summary>
     public AudioClip ButtonSE;
+    /// <summary>クラゲSE</summary>
+    public AudioClip KurageSE;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -44,6 +46,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { GameClearSceneBGM.name, GameClearSceneBGM},
             { TutorialBGM.name, TutorialBGM},
             { ButtonSE.name, ButtonSE},
+            { KurageSE.name, KurageSE},
         };
     }
 

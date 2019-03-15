@@ -946,6 +946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5333be07950e0e64f8560f714b0a16d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameDirector: {fileID: 406751759}
   Canvas: {fileID: 659296838}
   KuragePrefab: {fileID: 1244601739178934, guid: 649c488ba93706a4d9ccabd894a0ca67,
     type: 2}

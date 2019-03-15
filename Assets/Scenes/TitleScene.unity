@@ -445,7 +445,9 @@ MonoBehaviour:
   GameSceneBGM: {fileID: 8300000, guid: 96da4be63ccac034b8efc903bc84a322, type: 3}
   GameOverSceneBGM: {fileID: 8300000, guid: 07b219177eb8cf94f8a3d75823d3b777, type: 3}
   GameClearSceneBGM: {fileID: 8300000, guid: 8e433b6103d5fad45a88f5830686e220, type: 3}
-  TutorialBGM: {fileID: 8300000, guid: c3a13eb0f320c024ca33c8dbb091d5c4, type: 3}
+  TutorialBGM: {fileID: 8300000, guid: ac62d1421baffc549b90ff74bcab610d, type: 3}
+  ButtonSE: {fileID: 8300000, guid: 4765ed09f35d06d48b0e9e1168fecefe, type: 3}
+  KurageSE: {fileID: 8300000, guid: 6df0ecc8bacf78d44bc737415e14e801, type: 3}
 --- !u!82 &1516582580
 AudioSource:
   m_ObjectHideFlags: 0
