@@ -12,6 +12,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip GameOverSceneBGM;
     /// <summary>ゲームクリアシーンBGM</summary>
     public AudioClip GameClearSceneBGM;
+    /// <summary>チュートリアルBGM</summary>
+    public AudioClip TutorialBGM;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -38,6 +40,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { GameSceneBGM.name, GameSceneBGM},
             { GameOverSceneBGM.name, GameOverSceneBGM},
             { GameClearSceneBGM.name, GameClearSceneBGM},
+            { TutorialBGM.name, TutorialBGM},
         };
     }
 

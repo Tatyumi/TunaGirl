@@ -35,6 +35,8 @@ namespace Common
         public const string GAME_OVER_SCENE_BGM = "GameOverSceneBGM";
         /// <summary>ゲームクリアシーンBGM</summary>
         public const string GAME_CLEAR_SCENE_BGM = "GameClearSceneBGM";
+        /// <summary>チュートリアルBGM</summary>
+        public const string TUTORIAL_BGM = "TutorialBGM";
     }
 
     // オブジェクト名

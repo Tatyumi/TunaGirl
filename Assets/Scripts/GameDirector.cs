@@ -28,6 +28,7 @@ public class GameDirector : MonoBehaviour
 
     private void Start()
     {
+        // チュートリアル画面を表示
         OnTutorialMode();
     }
     
@@ -45,6 +46,8 @@ public class GameDirector : MonoBehaviour
     /// </summary>
     public void OnTutorialMode()
     {
+        // チュートリアルのBGMを再生
+        audioManager.PlaySound(AudioName.TUTORIAL_BGM);
         TunaGirl.SetActive(false);
         TunaBoy.SetActive(false);
         KonbuGenerator.SetActive(false);
@@ -59,6 +62,9 @@ public class GameDirector : MonoBehaviour
     /// </summary>
     public void GameStart()
     {
+        // 音を停止
+        audioManager.StopSound();
+
         // BGM再生
         audioManager.PlaySound(AudioName.GAME_SCENE_BGM);
 
