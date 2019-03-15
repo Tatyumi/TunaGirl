@@ -41,6 +41,8 @@ namespace Common
         public const string BUTTON_SE = "ButtonSE";
         /// <summary>クラゲSE名</summary>
         public const string KURAGE_SE = "KurageSE";
+        /// <summary>ネットSE名</summary>
+        public const string NET_SE = "NetSE";
     }
 
     // オブジェクト名

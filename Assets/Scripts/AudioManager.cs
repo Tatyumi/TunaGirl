@@ -18,6 +18,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip ButtonSE;
     /// <summary>クラゲSE</summary>
     public AudioClip KurageSE;
+    /// <summary>ネットSE</summary>
+    public AudioClip NetSE;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -47,6 +49,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { TutorialBGM.name, TutorialBGM},
             { ButtonSE.name, ButtonSE},
             { KurageSE.name, KurageSE},
+            { NetSE.name, NetSE},
         };
     }
 

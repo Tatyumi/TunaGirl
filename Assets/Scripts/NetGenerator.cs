@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using Common;
 
 public class NetGenerator : MonoBehaviour
 {
+    /// <summary>ゲームディレクターオブジェクト</summary>
+    public GameObject GameDirector;
     /// <summary>キャンバス</summary>
     public GameObject Canvas;
     /// <summary>ネットプレファブ </summary>
@@ -11,18 +14,25 @@ public class NetGenerator : MonoBehaviour
     /// <summary></summary>
     private float delta = 0.0f;
     /// <summary>ネットプレファブのX座標</summary>
-    private float NetPositionX;
+    private float netPositionX;
     /// <summary>ネットプレファブのY座標</summary>
-    private float NetPositionY;
+    private float netPositionY;
+    /// <summary>ゲームディレクター</summary>
+    private GameDirector gameDirector;
+
+    void Awake()
+    {
+        gameDirector = GameDirector.GetComponent<GameDirector>();
+    }
 
     // Use this for initialization
     void Start()
     {
         // 画面右端の座標を取得
-        NetPositionX = Screen.width / 2;
+        netPositionX = Screen.width / 2;
 
         // ネット画像の上辺が画面上と重なるよう計算
-        NetPositionY = (Screen.height / 2) - NetPrefab.GetComponent<RectTransform>().sizeDelta.y / 2;
+        netPositionY = (Screen.height / 2) - NetPrefab.GetComponent<RectTransform>().sizeDelta.y / 2;
     }
 
     // Update is called once per frame
@@ -40,7 +50,10 @@ public class NetGenerator : MonoBehaviour
             gameObject.transform.SetParent(Canvas.transform, false);
 
             // プレファブを生成
-            gameObject.transform.localPosition = new Vector2(NetPositionX, NetPositionY);
+            gameObject.transform.localPosition = new Vector2(netPositionX, netPositionY);
+
+            // ネット生成時のSEを再生
+            gameDirector.audioManager.PlaySound(AudioName.NET_SE);
         }
     }
 }

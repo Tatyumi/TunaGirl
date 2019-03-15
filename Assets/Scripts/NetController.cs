@@ -5,7 +5,7 @@ using Common;
 public class NetController : EnemyController,IKillablePlayer
 {
     /// <summary>移動速度</summary>
-    private const float moveSpeed = 20.0f;
+    private const float moveSpeed = 15.0f;
 	
 	// Update is called once per frame
 	void Update ()
