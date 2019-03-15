@@ -76,4 +76,12 @@ public class GameDirector : MonoBehaviour
 
         TutorialPanel.SetActive(false);
     }
+
+    /// <summary>
+    /// スタートボタンクリック処理
+    /// </summary>
+    public void ClickStartButton()
+    {
+        audioManager.PlaySound(AudioName.BUTTON_SE);
+    }
 }
