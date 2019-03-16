@@ -449,6 +449,7 @@ MonoBehaviour:
   ButtonSE: {fileID: 8300000, guid: 4765ed09f35d06d48b0e9e1168fecefe, type: 3}
   KurageSE: {fileID: 8300000, guid: 6df0ecc8bacf78d44bc737415e14e801, type: 3}
   NetSE: {fileID: 8300000, guid: f6b4dd6a376f0a54fb2d0c6c5bfc05eb, type: 3}
+  OctpusSE: {fileID: 8300000, guid: 3f7402266be8e884384e6bbfd99d7250, type: 3}
 --- !u!82 &1516582580
 AudioSource:
   m_ObjectHideFlags: 0
