@@ -13,7 +13,8 @@ public class EnemyController : MonoBehaviour
         None,   // 該当なし
         Kurage, // クラゲ
         Konbu,  // コンブ
-        Net     // ネット
+        Net,    // ネット
+        Octopus // タコ
     }
 
     /// <summary>

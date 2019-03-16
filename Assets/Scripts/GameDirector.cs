@@ -16,6 +16,8 @@ public class GameDirector : MonoBehaviour
     public GameObject NetGenerator;
     /// <summary>チュートリアルパネルオブジェクト</summary>
     public GameObject TutorialPanel;
+    /// <summary>オクトパスジェネレータオブジェクト</summary>
+    public GameObject OctpusGenerator;
 
     /// <summary>オーディオソース</summary>
     public AudioManager audioManager;
@@ -48,11 +50,13 @@ public class GameDirector : MonoBehaviour
     {
         // チュートリアルのBGMを再生
         audioManager.PlaySound(AudioName.TUTORIAL_BGM);
+
         TunaGirl.SetActive(false);
         TunaBoy.SetActive(false);
         KonbuGenerator.SetActive(false);
         KurageGenerator.SetActive(false);
         NetGenerator.SetActive(false);
+        OctpusGenerator.SetActive(false);
 
         TutorialPanel.SetActive(true);
     }
@@ -73,6 +77,7 @@ public class GameDirector : MonoBehaviour
         KonbuGenerator.SetActive(true);
         KurageGenerator.SetActive(true);
         NetGenerator.SetActive(true);
+        OctpusGenerator.SetActive(true);
 
         TutorialPanel.SetActive(false);
     }

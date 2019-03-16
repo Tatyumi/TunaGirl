@@ -10,6 +10,8 @@ public class GameOverDirector : MonoBehaviour
     public GameObject KonbuGameOver;
     /// <summary>ネットによるゲームオーバーオブジェクト</summary>
     public GameObject NetGameOver;
+    /// <summary>オクトパスによるゲームオブジェクト</summary>
+    public GameObject OctpusGameOver;
 
     /// <summary>オーディオソース</summary>
     private AudioManager audioManager;
@@ -30,6 +32,7 @@ public class GameOverDirector : MonoBehaviour
         KurageGameOver.SetActive(false);
         KonbuGameOver.SetActive(false);
         NetGameOver.SetActive(false);
+        OctpusGameOver.SetActive(false);
 
         // ゲームオーバー演出の表示
         ActiveGameOverPerformance(EnemyController.AttackEnemy);
@@ -70,6 +73,11 @@ public class GameOverDirector : MonoBehaviour
         {
             // ネットの場合
             NetGameOver.SetActive(true);
+        }
+        else if (category == (int)EnemyController.EnemyCategory.Octopus)
+        {
+            // オクトパスの場合
+            OctpusGameOver.SetActive(true);
         }
         else
         {
