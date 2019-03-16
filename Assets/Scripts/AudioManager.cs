@@ -20,6 +20,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip KurageSE;
     /// <summary>ネットSE</summary>
     public AudioClip NetSE;
+    /// <summary>オクトパスSE</summary>
+    public AudioClip OctpusSE;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -50,6 +52,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { ButtonSE.name, ButtonSE},
             { KurageSE.name, KurageSE},
             { NetSE.name, NetSE},
+            { OctpusSE.name, OctpusSE},
         };
     }
 

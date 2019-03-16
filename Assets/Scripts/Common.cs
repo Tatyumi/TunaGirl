@@ -43,6 +43,8 @@ namespace Common
         public const string KURAGE_SE = "KurageSE";
         /// <summary>ネットSE名</summary>
         public const string NET_SE = "NetSE";
+        /// <summary>オクトパスSE名</summary>
+        public const string OCTPUS_SE = "OctpusSE";
     }
 
     // オブジェクト名
