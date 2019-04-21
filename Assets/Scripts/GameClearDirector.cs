@@ -15,7 +15,7 @@ public class GameClearDirector : MonoBehaviour
     private void Awake()
     {
         // オーディオマネージャー取得
-        audioManager = GameObject.Find(ObjectName.AUDIO_MANAGER).GetComponent<AudioManager>();
+        audioManager = AudioManager.Instance;
     }
 
     // Use this for initialization
