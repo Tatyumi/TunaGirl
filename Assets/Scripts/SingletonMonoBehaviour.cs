@@ -19,6 +19,9 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
                 }
             }
 
+            //シーンが遷移しても破棄されない
+            DontDestroyOnLoad(instance);
+
             return instance;
         }
     }
