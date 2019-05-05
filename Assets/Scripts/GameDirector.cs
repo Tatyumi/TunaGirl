@@ -18,7 +18,6 @@ public class GameDirector : MonoBehaviour
     public GameObject TutorialPanel;
     /// <summary>オクトパスジェネレータオブジェクト</summary>
     public GameObject OctpusGenerator;
-
     /// <summary>オーディオソース</summary>
     public AudioManager audioManager;
 
@@ -33,7 +32,7 @@ public class GameDirector : MonoBehaviour
         // チュートリアル画面を表示
         OnTutorialMode();
     }
-    
+
     /// <summary>
     /// ゲームクリア処理
     /// </summary>
