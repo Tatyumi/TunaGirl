@@ -17,12 +17,12 @@ public class OctopusGenerator : MonoBehaviour
     private float delta = 0.0f;
     /// <summary>オクトパスプレファブ生成時のX座標</summary>
     private float octpusPositionX;
-    /// <summary>ゲームディレクター</summary>
-    private GameDirector gameDirector;
+    /// <summary>オーディオマネージャー</summary>
+    public AudioManager audioManager;
 
     void Awake()
     {
-        gameDirector = GameDirector.GetComponent<GameDirector>();
+        audioManager = AudioManager.Instance;
     }
 
     void Start()
@@ -50,7 +50,7 @@ public class OctopusGenerator : MonoBehaviour
             gameObject.transform.localPosition = new Vector2(octpusPositionX, Player.transform.localPosition.y);
 
             // オクトパス生成時のSeを再生
-            gameDirector.audioManager.PlaySound(AudioName.OCTPUS_SE);
+            audioManager.PlaySound(AudioName.OCTPUS_SE);
         }
     }
 }

@@ -17,12 +17,12 @@ public class NetGenerator : MonoBehaviour
     private float netPositionX;
     /// <summary>ネットプレファブのY座標</summary>
     private float netPositionY;
-    /// <summary>ゲームディレクター</summary>
-    private GameDirector gameDirector;
+    /// <summary>オーディオマネージャー</summary>
+    public AudioManager audioManager;
 
     void Awake()
     {
-        gameDirector = GameDirector.GetComponent<GameDirector>();
+        audioManager = AudioManager.Instance;
     }
 
     // Use this for initialization
@@ -53,7 +53,7 @@ public class NetGenerator : MonoBehaviour
             gameObject.transform.localPosition = new Vector2(netPositionX, netPositionY);
 
             // ネット生成時のSEを再生
-            gameDirector.audioManager.PlaySound(AudioName.NET_SE);
+            audioManager.PlaySound(AudioName.NET_SE);
         }
     }
 }

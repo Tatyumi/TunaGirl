@@ -19,12 +19,12 @@ public class KurageGenerator : MonoBehaviour
     private int minKuaregePositionY = 0;
     /// <summary>クラゲプレファブ生成時のX座標</summary>
     private float kuragePositionX;
-    /// <summary>ゲームディレクター</summary>
-    private GameDirector gameDirector;
+    /// <summary>オーディオマネージャー</summary>
+    public AudioManager audioManager;
 
     void Awake()
     {
-        gameDirector = GameDirector.GetComponent<GameDirector>();
+        audioManager = AudioManager.Instance;
     }
 
     void Start()
@@ -58,7 +58,7 @@ public class KurageGenerator : MonoBehaviour
             gameObject.transform.localPosition = new Vector2(kuragePositionX, kuragePositionY);
 
             // クラゲ生成時のSeを再生
-            gameDirector.audioManager.PlaySound(AudioName.KURAGE_SE);
+            audioManager.PlaySound(AudioName.KURAGE_SE);
         }
     }
 }
