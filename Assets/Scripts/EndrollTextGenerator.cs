@@ -20,7 +20,7 @@ public class EndrollTextGenerator : MonoBehaviour
     /// <summary>エンドロールテキスト生成時のY座標</summary>
     private float EndrollPositionY;
     /// <summary>エンドロールテキスト</summary>
-    private string[] endrollTexts = new string[10];
+    private string[] endrollTexts = new string[8];
     private Vector2 endrollTextSize;
 
 
@@ -85,15 +85,13 @@ public class EndrollTextGenerator : MonoBehaviour
     /// </summary>
     private void SetEndrollText()
     {
-        endrollTexts[0] = "Programer:Tatyumi";
-        endrollTexts[1] = "Designer:Tatyumi";
-        endrollTexts[2] = "Music";
-        endrollTexts[3] = "MaouDamashi";
-        endrollTexts[4] = "MusMus";
-        endrollTexts[5] = "taira-komori";
-        endrollTexts[6] = "soundeffect-lab";
-        endrollTexts[7] = "DOVA-SYNDROME";
-        endrollTexts[8] = "ThankYouForPlaying!";
-        endrollTexts[9] = "GoodBye";
+        endrollTexts[0] = "Programer : Tatyumi";
+        endrollTexts[1] = "Designer : Tatyumi";
+        endrollTexts[2] = "Music : MaouDamashi";
+        endrollTexts[3] = "Music : MusMus";
+        endrollTexts[4] = "Music : taira - komori";
+        endrollTexts[5] = "Music : soundeffect - lab";
+        endrollTexts[6] = "Music : DOVA - SYNDROME";
+        endrollTexts[7] = "Good Bye!";
     }
 }
