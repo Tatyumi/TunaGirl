@@ -801,7 +801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameDirector: {fileID: 406751759}
   Canvas: {fileID: 659296838}
-  NetPrefab: {fileID: 1535829878753650, guid: 2e31a6b5ed7424f45a0ce5e7291eaa35, type: 2}
+  NetPrefab: {fileID: 1525553649650760, guid: 2e31a6b5ed7424f45a0ce5e7291eaa35, type: 2}
 --- !u!4 &1298685461
 Transform:
   m_ObjectHideFlags: 0
