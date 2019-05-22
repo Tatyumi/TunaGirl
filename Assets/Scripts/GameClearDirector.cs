@@ -20,6 +20,9 @@ public class GameClearDirector : MonoBehaviour
     private float waitTime = 0.0f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
+    /// <summary>全ステージ数</summary>
+    private int allStageCount = 2;
+
 
     private void Awake()
     {
@@ -65,9 +68,17 @@ public class GameClearDirector : MonoBehaviour
             // ゲーム進捗の更新
             WaveDirector.progressCount++;
 
-            // 次のシーンに遷移
-            SceneManager.LoadScene(Common.SceneName.WAVE_SCENE);
+            //　全ステージクリアしたかどうか
+            if(WaveDirector.progressCount >= allStageCount)
+            {
+                // ゲームエンドシーンに遷移
+                SceneManager.LoadScene(SceneName.GAME_END_SCENE);
+            }
+            else
+            {
+                // ウェイブシーンに遷移
+                SceneManager.LoadScene(Common.SceneName.WAVE_SCENE);
+            }
         }
-
     }
 }
