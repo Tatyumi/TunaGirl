@@ -21,7 +21,7 @@ public class WaveDirector : MonoBehaviour
     /// <summary>ツナボーイのリスト</summary>
     private Transform tunaBoies;
     /// <summary>オーディオマネージャー</summary>
-    //private AudioManager audioManager;
+    private AudioManager audioManager;
     /// <summary>ガイドテキスト</summary>
     private Text guideText;
     /// <summary>次のステージ名</summary>
@@ -47,16 +47,20 @@ public class WaveDirector : MonoBehaviour
         //　全ツナボーイの取得
         tunaBoies = TunaBoy.GetComponentInChildren<Transform>();
 
+        // ガイドテキストの取得
         guideText = GuideText.GetComponent<Text>();
 
         // オーディオマネージャー取得
-        //audioManager = AudioManager.Instance;
+        audioManager = AudioManager.Instance;
     }
 
     // Use this for initialization
     void Start()
     {
-        // 初期化
+        // 待機時間初期化
+        waitTime = audioManager.WaveBGM.length;
+
+        // 画像初期化
         for (int i = 0; i < backGrounds.childCount; i++)
         {
             // 背景画像を非表示
@@ -87,16 +91,22 @@ public class WaveDirector : MonoBehaviour
 
         // ガイドテキストにコメントを代入
         guideText.text = guideComment;
+
+        // BGMの再生
+        audioManager.PlaySound(Common.AudioName.WAVE_BGM);
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.delta += Time.time;
+        this.delta += Time.deltaTime;
 
         // 一定時間経過したか判別
-        if(this.delta > waitTime)
+        if (this.delta > waitTime)
         {
+            // BGMの停止
+            audioManager.StopSound();
+
             // 次のシーンに遷移
             SceneManager.LoadScene(nextStageName);
         }
