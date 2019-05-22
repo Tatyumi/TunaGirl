@@ -21,7 +21,7 @@ public class KaniController : EnemyController, IKillablePlayer
     /// </summary>
     public void KillPlayer()
     {
-        base.DetectAttackEnemy((int)EnemyCategory.Konbu);
+        base.DetectAttackEnemy((int)EnemyCategory.Kani);
         SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }
