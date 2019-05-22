@@ -57,6 +57,9 @@ public class WaveDirector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // BGMの再生
+        audioManager.PlaySound(Common.AudioName.WAVE_BGM);
+
         // 待機時間初期化
         waitTime = audioManager.WaveBGM.length;
 
@@ -92,8 +95,6 @@ public class WaveDirector : MonoBehaviour
         // ガイドテキストにコメントを代入
         guideText.text = guideComment;
 
-        // BGMの再生
-        audioManager.PlaySound(Common.AudioName.WAVE_BGM);
     }
 
     // Update is called once per frame
