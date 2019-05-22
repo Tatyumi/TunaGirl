@@ -58,11 +58,4 @@ namespace Common
         /// <summary>ステージ2シーンBGM名</summary>
         public const string STAGE_TWO_SCENE_BGM = "StageTwoBGM";
     }
-
-    // オブジェクト名
-    public class ObjectName
-    {
-        /// <summary>オーディオマネージャー</summary>
-        public const string AUDIO_MANAGER = "AudioManager";
-    }
 }
