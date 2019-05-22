@@ -28,6 +28,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip GameClearSceneBGM;
     /// <summary>ステージ2シーンBGM</summary>
     public AudioClip StageTwoSceneBGM;
+    /// <summary>イカパスSE</summary>
+    public AudioClip IkaSE;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -59,6 +61,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { WaveBGM.name, WaveBGM},
             { GameClearSceneBGM.name, GameClearSceneBGM},
             { StageTwoSceneBGM.name, StageTwoSceneBGM},
+            { IkaSE.name, IkaSE},
         };
     }
 

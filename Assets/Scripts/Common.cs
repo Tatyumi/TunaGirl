@@ -57,5 +57,7 @@ namespace Common
         public const string GAME_CLEAR_SCENE_BGM = "GameClearSceneBGM";
         /// <summary>ステージ2シーンBGM名</summary>
         public const string STAGE_TWO_SCENE_BGM = "StageTwoBGM";
+        /// <summary>イカSE名</summary>
+        public const string IKA_SE = "IkaSE";
     }
 }

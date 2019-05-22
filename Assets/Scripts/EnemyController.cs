@@ -16,7 +16,8 @@ public class EnemyController : MonoBehaviour
         Net,    // ネット
         Octopus,// タコ
         Kani,   // カニ
-        Gomi    // ゴミ 
+        Gomi,   // ゴミ 
+        Ika     // イカ
     }
 
     /// <summary>
