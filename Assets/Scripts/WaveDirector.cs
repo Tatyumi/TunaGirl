@@ -90,6 +90,7 @@ public class WaveDirector : MonoBehaviour
         else if (progressCount == (int)Progress.StageTwo)
         {
             guideComment = "STAGE2 !";
+            nextStageName = Common.SceneName.STAGE_TWO_SCENE;
         }
 
         // ガイドテキストにコメントを代入
