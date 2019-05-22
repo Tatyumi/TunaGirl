@@ -30,8 +30,8 @@ public class TitleDirector : MonoBehaviour
             // 音楽停止
             audioManager.StopSound();
 
-            // ゲームシーンに移動
-            SceneManager.LoadScene(SceneName.GAME_SCENE);
+            // ウェイブシーンに移動
+            SceneManager.LoadScene(SceneName.WAVVE_SCENE);
         }
     }
 }
