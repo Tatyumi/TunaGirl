@@ -18,6 +18,8 @@ public class GameOverDirector : MonoBehaviour
     public GameObject GomiGameOver;
     /// <summary>イカによるゲームオーバーオブジェクト</summary>
     public GameObject IkaGameOver;
+    /// <summary>釣り針によるゲームオーバーオブジェクト</summary>
+    public GameObject TsuribariGameOver;
 
     /// <summary>オーディオソース</summary>
     private AudioManager audioManager;
@@ -42,6 +44,7 @@ public class GameOverDirector : MonoBehaviour
         KaniGameOver.SetActive(false);
         GomiGameOver.SetActive(false);
         IkaGameOver.SetActive(false);
+        TsuribariGameOver.SetActive(false);
 
         // ゲームオーバー演出の表示
         ActiveGameOverPerformance(EnemyController.AttackEnemy);
@@ -102,6 +105,11 @@ public class GameOverDirector : MonoBehaviour
         {
             // イカの場合
             IkaGameOver.SetActive(true);
+        }
+        else if (category == (int)EnemyController.EnemyCategory.Tsuribari)
+        {
+            // 釣り針の場合
+            TsuribariGameOver.SetActive(true);
         }
         else
         {

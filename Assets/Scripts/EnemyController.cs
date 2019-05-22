@@ -10,14 +10,15 @@ public class EnemyController : MonoBehaviour
     // 敵キャラのカテゴリ
     public enum EnemyCategory
     {
-        None,   // 該当なし
-        Kurage, // クラゲ
-        Konbu,  // コンブ
-        Net,    // ネット
-        Octopus,// タコ
-        Kani,   // カニ
-        Gomi,   // ゴミ 
-        Ika     // イカ
+        None,       // 該当なし
+        Kurage,     // クラゲ
+        Konbu,      // コンブ
+        Net,        // ネット
+        Octopus,    // タコ
+        Kani,       // カニ
+        Gomi,       // ゴミ 
+        Ika,        // イカ
+        Tsuribari   // 釣り針
     }
 
     /// <summary>
