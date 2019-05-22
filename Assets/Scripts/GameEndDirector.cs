@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using Common;
 
-public class GameClearDirector : MonoBehaviour
+public class GameEndDirector : MonoBehaviour
 {
 
     /// <summary>オーディオソース</summary>
