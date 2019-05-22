@@ -3,8 +3,6 @@ using Common;
 
 public class OctopusGenerator : MonoBehaviour
 {
-    /// <summary>ゲームディレクターオブジェクト</summary>
-    public GameObject GameDirector;
     /// <summary>プレイヤーオブジェクト</summary>
     public GameObject Player;
     /// <summary>キャンバス</summary>
