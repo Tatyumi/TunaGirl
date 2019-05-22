@@ -55,8 +55,6 @@ public class TsuribariGenerator : MonoBehaviour {
             // プレファブを生成
             gameObject.transform.localPosition = new Vector2(TsuribariPositionX, kuragePositionY);
 
-            // 釣り針生成時のSeを再生
-            audioManager.PlaySound(AudioName.KURAGE_SE);
         }
     }
 }
