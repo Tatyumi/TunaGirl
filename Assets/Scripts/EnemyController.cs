@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     // 敵キャラのカテゴリ
     public enum EnemyCategory
     {
-        None,       // 該当なし
+        None = -1,  // 該当なし
         Kurage,     // クラゲ
         Konbu,      // コンブ
         Net,        // ネット
