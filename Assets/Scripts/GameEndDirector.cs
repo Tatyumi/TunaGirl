@@ -21,7 +21,7 @@ public class GameEndDirector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        audioManager.PlaySound(AudioName.GAME_CLEAR_SCENE_BGM);
+        audioManager.PlaySound(AudioName.GAME_END_SCENE_BGM);
 
         // ガイドテキストを無効
         GuideText.SetActive(false);
