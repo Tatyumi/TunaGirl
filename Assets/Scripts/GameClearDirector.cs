@@ -6,7 +6,6 @@ using Common;
 
 public class GameClearDirector : MonoBehaviour
 {
-
     /// <summary>背景画像オブジェクト</summary>
     public GameObject BackGround;
     /// <summary>ツナボーイオブジェクト</summary>
@@ -60,8 +59,11 @@ public class GameClearDirector : MonoBehaviour
             // BGMの停止
             audioManager.StopSound();
 
+            // ゲーム進捗の更新
+            WaveDirector.progressCount++;
+
             // 次のシーンに遷移
-            SceneManager.LoadScene(Common.SceneName.WAVVE_SCENE);
+            SceneManager.LoadScene(Common.SceneName.WAVE_SCENE);
         }
 
     }
