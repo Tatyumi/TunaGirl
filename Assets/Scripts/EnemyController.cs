@@ -15,7 +15,8 @@ public class EnemyController : MonoBehaviour
         Konbu,  // コンブ
         Net,    // ネット
         Octopus,// タコ
-        Kani    //カニ
+        Kani,   // カニ
+        Gomi    // ゴミ 
     }
 
     /// <summary>
