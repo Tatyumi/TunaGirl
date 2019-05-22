@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
         // TargetTunaに衝突した場合
         if (other.gameObject.tag == TagName.TARGET_TAG)
         {
+            // ゲーム進捗の更新
+            WaveDirector.progressCount++;
+
             // GameClearシーンに遷移する
             gameDirector.ClearGame();
 
