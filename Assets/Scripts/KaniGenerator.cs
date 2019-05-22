@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Common;
 
 public class KaniGenerator : MonoBehaviour {
 
@@ -16,6 +17,14 @@ public class KaniGenerator : MonoBehaviour {
     private float kaniPositionX;
     /// <summary>カニプレファブのY座標</summary>
     private float kaniPositionY;
+    /// <summary>オーディオマネージャー</summary>
+    public AudioManager audioManager;
+
+    void Awake()
+    {
+        audioManager = AudioManager.Instance;
+    }
+
 
     // Use this for initialization
     void Start ()
@@ -44,6 +53,9 @@ public class KaniGenerator : MonoBehaviour {
 
             // プレファブを生成
             gameObject.transform.localPosition = new Vector2(kaniPositionX, kaniPositionY);
+
+            // カニ生成時のSeを再生
+            audioManager.PlaySound(AudioName.KANI_SE);
         }
     }
 }

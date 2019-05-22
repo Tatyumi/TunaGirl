@@ -522,6 +522,7 @@ MonoBehaviour:
   GameClearSceneBGM: {fileID: 8300000, guid: d432268eda35bd64d9cda56cb10330b3, type: 3}
   StageTwoSceneBGM: {fileID: 8300000, guid: 5a3f06f98eadcc847960a77be1766fa2, type: 3}
   IkaSE: {fileID: 8300000, guid: d921884737c0edf45add2e6fe7b34c41, type: 3}
+  KaniSE: {fileID: 8300000, guid: 3ec81bcfeda03b94b89f2a8bb81a48b9, type: 3}
 --- !u!82 &1516582580
 AudioSource:
   m_ObjectHideFlags: 0
