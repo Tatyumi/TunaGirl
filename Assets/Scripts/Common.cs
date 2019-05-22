@@ -9,12 +9,14 @@ namespace Common
         public const string TITLE_SCENE = "TitleScene";
         /// <summary>ゲームシーン名</summary>
         public const string GAME_SCENE = "GameScene";
-        /// <summary>ゲームクリアシーン名</summary>
-        public const string GAME_CLEAR_SCENE = "GameClear";
+        /// <summary>ゲームエンドシーン名</summary>
+        public const string GAME_END_SCENE = "GameEndScene";
         /// <summary>ゲームオーバーシーン名</summary>
         public const string GAME_OVER_SCENE = "GameOverScene";
         /// <summary>ウェイブシーン</summary>
         public const string WAVE_SCENE = "WaveScene";
+        /// <summary>ゲームクリアシーン名</summary>
+        public const string GAME_CLEAR_SCENE = "GameClearScene";
     }
 
     // タグ名
