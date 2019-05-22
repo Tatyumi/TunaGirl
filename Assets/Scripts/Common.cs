@@ -55,6 +55,8 @@ namespace Common
         public const string WAVE_BGM = "WaveBGM";
         /// <summary>ゲームクリアシーンBGM名</summary>
         public const string GAME_CLEAR_SCENE_BGM = "GameClearSceneBGM";
+        /// <summary>ステージ2シーンBGM名</summary>
+        public const string STAGE_TWO_SCENE_BGM = "StageTwoBGM";
     }
 
     // オブジェクト名

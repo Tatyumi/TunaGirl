@@ -26,6 +26,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip WaveBGM;
     /// <summary>ゲームクリアシーンBGM</summary>
     public AudioClip GameClearSceneBGM;
+    /// <summary>ステージ2シーンBGM</summary>
+    public AudioClip StageTwoSceneBGM;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -56,6 +58,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { OctpusSE.name, OctpusSE},
             { WaveBGM.name, WaveBGM},
             { GameClearSceneBGM.name, GameClearSceneBGM},
+            { StageTwoSceneBGM.name, StageTwoSceneBGM},
         };
     }
 
