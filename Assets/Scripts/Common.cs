@@ -17,6 +17,8 @@ namespace Common
         public const string WAVE_SCENE = "WaveScene";
         /// <summary>ゲームクリアシーン名</summary>
         public const string GAME_CLEAR_SCENE = "GameClearScene";
+        /// <summary>ステージ2シーン名</summary>
+        public const string STAGE_TWO_SCENE = "StageTwoScene";
     }
 
     // タグ名
