@@ -10,8 +10,10 @@ public class GameOverDirector : MonoBehaviour
     public GameObject KonbuGameOver;
     /// <summary>ネットによるゲームオーバーオブジェクト</summary>
     public GameObject NetGameOver;
-    /// <summary>オクトパスによるゲームオブジェクト</summary>
+    /// <summary>オクトパスによるゲームオーバーオブジェクト</summary>
     public GameObject OctpusGameOver;
+    /// <summary>カニによるゲームオーバーオブジェクト</summary>
+    public GameObject KaniGameOver;
 
     /// <summary>オーディオソース</summary>
     private AudioManager audioManager;
@@ -33,6 +35,7 @@ public class GameOverDirector : MonoBehaviour
         KonbuGameOver.SetActive(false);
         NetGameOver.SetActive(false);
         OctpusGameOver.SetActive(false);
+        KaniGameOver.SetActive(false);
 
         // ゲームオーバー演出の表示
         ActiveGameOverPerformance(EnemyController.AttackEnemy);
@@ -78,6 +81,11 @@ public class GameOverDirector : MonoBehaviour
         {
             // オクトパスの場合
             OctpusGameOver.SetActive(true);
+        }
+        else if (category == (int)EnemyController.EnemyCategory.Kani)
+        {
+            // カニの場合
+            KaniGameOver.SetActive(true);
         }
         else
         {
