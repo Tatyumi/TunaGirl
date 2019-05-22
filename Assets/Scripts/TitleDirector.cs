@@ -31,7 +31,7 @@ public class TitleDirector : MonoBehaviour
             audioManager.StopSound();
 
             // ウェイブシーンに移動
-            SceneManager.LoadScene(SceneName.WAVVE_SCENE);
+            SceneManager.LoadScene(SceneName.WAVE_SCENE);
         }
     }
 }
