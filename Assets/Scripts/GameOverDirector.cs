@@ -4,22 +4,10 @@ using Common;
 
 public class GameOverDirector : MonoBehaviour
 {
-    /// <summary>クラゲによるゲームオーバーオブジェクト</summary>
-    public GameObject KurageGameOver;
-    /// <summary>コンブによるゲームオーバーオブジェクト</summary>
-    public GameObject KonbuGameOver;
-    /// <summary>ネットによるゲームオーバーオブジェクト</summary>
-    public GameObject NetGameOver;
-    /// <summary>オクトパスによるゲームオーバーオブジェクト</summary>
-    public GameObject OctpusGameOver;
-    /// <summary>カニによるゲームオーバーオブジェクト</summary>
-    public GameObject KaniGameOver;
-    /// <summary>ゴミによるゲームオーバーオブジェクト</summary>
-    public GameObject GomiGameOver;
-    /// <summary>イカによるゲームオーバーオブジェクト</summary>
-    public GameObject IkaGameOver;
-    /// <summary>釣り針によるゲームオーバーオブジェクト</summary>
-    public GameObject TsuribariGameOver;
+    /// <summary>ゲームオーバーオブジェクト</summary>
+    public GameObject GameOver;
+    /// <summary>ゲームオーバーリスト</summary>
+    private Transform gameOvers;
 
     /// <summary>オーディオソース</summary>
     private AudioManager audioManager;
@@ -28,6 +16,9 @@ public class GameOverDirector : MonoBehaviour
     {
         // オーディオマネージャー取得
         audioManager = AudioManager.Instance;
+
+        // 全ゲームオーバオブジェクトの取得
+        gameOvers = GameOver.GetComponentInChildren<Transform>();
     }
 
     // Use this for initialization
@@ -37,18 +28,14 @@ public class GameOverDirector : MonoBehaviour
         audioManager.PlaySound(AudioName.GAME_OVER_SCENE_BGM);
 
         // ゲームオーバ演出を全て非表示
-        KurageGameOver.SetActive(false);
-        KonbuGameOver.SetActive(false);
-        NetGameOver.SetActive(false);
-        OctpusGameOver.SetActive(false);
-        KaniGameOver.SetActive(false);
-        GomiGameOver.SetActive(false);
-        IkaGameOver.SetActive(false);
-        TsuribariGameOver.SetActive(false);
+        for(int i = 0; i < gameOvers.childCount; i++)
+        {
+            // ゲームオーバー画像を非表示
+            gameOvers.GetChild(i).gameObject.SetActive(false);
+        }
 
         // ゲームオーバー演出の表示
-        ActiveGameOverPerformance(EnemyController.AttackEnemy);
-
+        gameOvers.GetChild(EnemyController.AttackEnemy).gameObject.SetActive(true);
     }
 
     void Update()
@@ -61,60 +48,6 @@ public class GameOverDirector : MonoBehaviour
 
             // ゲームシーンに移動
             SceneManager.LoadScene(SceneName.TITLE_SCENE);
-        }
-    }
-
-    /// <summary>
-    /// 該当するゲームオーバー演出を表示する
-    /// </summary>
-    /// <param name="category">敵キャラのカテゴリ</param>
-    private void ActiveGameOverPerformance(int category)
-    {
-        // 衝突した敵キャラを判別
-        if (category == (int)EnemyController.EnemyCategory.Konbu)
-        {
-            // コンブの場合
-            KonbuGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Kurage)
-        {
-            // クラゲの場合
-            KurageGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Net)
-        {
-            // ネットの場合
-            NetGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Octopus)
-        {
-            // オクトパスの場合
-            OctpusGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Kani)
-        {
-            // カニの場合
-            KaniGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Gomi)
-        {
-            // ゴミの場合
-            GomiGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Ika)
-        {
-            // イカの場合
-            IkaGameOver.SetActive(true);
-        }
-        else if (category == (int)EnemyController.EnemyCategory.Tsuribari)
-        {
-            // 釣り針の場合
-            TsuribariGameOver.SetActive(true);
-        }
-        else
-        {
-            // 該当しない場合
-            Debug.LogFormat("番号{0}：該当しません", category);
         }
     }
 }
