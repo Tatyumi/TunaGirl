@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using Common;
 
 public class GameDirector : MonoBehaviour
@@ -31,15 +30,6 @@ public class GameDirector : MonoBehaviour
     {
         // チュートリアル画面を表示
         OnTutorialMode();
-    }
-
-    /// <summary>
-    /// ゲームクリア処理
-    /// </summary>
-    public void ClearGame()
-    {
-        // ゲームクリアシーンに遷移
-        SceneManager.LoadScene(SceneName.GAME_CLEAR_SCENE);
     }
 
     /// <summary>

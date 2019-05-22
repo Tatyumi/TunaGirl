@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Common;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,16 +8,16 @@ public class PlayerController : MonoBehaviour
     public GameObject GameDirector;
     /// <summary>移動速度</summary>
     private const float moveSpeed = 7.0f;
-    /// <summary>ゲームディレクター</summary>
-    private GameDirector gameDirector;
     /// <summary>移動できるY座標の最大値</summary>
     private float maxMovePositionY;
     /// <summary>移動できるY座標の最小値</summary>
     private float minMovePositionY;
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
 
     private void Awake()
     {
-        gameDirector = GameDirector.GetComponent<GameDirector>();
+        audioManager = AudioManager.Instance;
     }
 
     private void Start()
@@ -63,13 +64,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // BGMの停止
-        gameDirector.audioManager.StopSound();
+        audioManager.StopSound();
 
         // TargetTunaに衝突した場合
         if (other.gameObject.tag == TagName.TARGET_TAG)
         {
             // GameClearシーンに遷移する
-            gameDirector.ClearGame();
+            SceneManager.LoadScene(SceneName.GAME_CLEAR_SCENE);
         }
         else
         {
