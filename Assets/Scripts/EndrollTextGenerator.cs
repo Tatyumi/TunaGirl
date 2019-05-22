@@ -74,7 +74,7 @@ public class EndrollTextGenerator : MonoBehaviour
             }
             else
             {
-                GameClearDirector.isEndroll = true;
+                GameEndDirector.isEndroll = true;
                 this.gameObject.SetActive(false);
             }
         }
