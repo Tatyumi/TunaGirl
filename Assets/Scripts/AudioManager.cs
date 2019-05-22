@@ -10,8 +10,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip GameSceneBGM;
     /// <summary>ゲームオーバーシーンBGM</summary>
     public AudioClip GameOverSceneBGM;
-    /// <summary>ゲームクリアシーンBGM</summary>
-    public AudioClip GameClearSceneBGM;
+    /// <summary>ゲームエンドシーンBGM</summary>
+    public AudioClip GameEndSceneBGM;
     /// <summary>チュートリアルBGM</summary>
     public AudioClip TutorialBGM;
     /// <summary>ボタンSE</summary>
@@ -24,6 +24,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip OctpusSE;
     /// <summary>ウェイブシーンBGM</summary>
     public AudioClip WaveBGM;
+    /// <summary>ゲームクリアシーンBGM</summary>
+    public AudioClip GameClearSceneBGM;
 
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
@@ -46,13 +48,14 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { TitleSceneBGM.name, TitleSceneBGM},
             { GameSceneBGM.name, GameSceneBGM},
             { GameOverSceneBGM.name, GameOverSceneBGM},
-            { GameClearSceneBGM.name, GameClearSceneBGM},
+            { GameEndSceneBGM.name, GameEndSceneBGM},
             { TutorialBGM.name, TutorialBGM},
             { ButtonSE.name, ButtonSE},
             { KurageSE.name, KurageSE},
             { NetSE.name, NetSE},
             { OctpusSE.name, OctpusSE},
             { WaveBGM.name, WaveBGM},
+            { GameClearSceneBGM.name, GameClearSceneBGM},
         };
     }
 

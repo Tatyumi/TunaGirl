@@ -35,8 +35,8 @@ namespace Common
         public const string GAME_SCENE_BGM = "GameSceneBGM";
         /// <summary>ゲームオーバーシーンBGM名</summary>
         public const string GAME_OVER_SCENE_BGM = "GameOverSceneBGM";
-        /// <summary>ゲームクリアシーンBGM名</summary>
-        public const string GAME_CLEAR_SCENE_BGM = "GameClearSceneBGM";
+        /// <summary>ゲームエンドシーンBGM名</summary>
+        public const string GAME_END_SCENE_BGM = "GameEndSceneBGM";
         /// <summary>チュートリアルBGM名</summary>
         public const string TUTORIAL_BGM = "TutorialBGM";
         /// <summary>ボタンSE名</summary>
@@ -49,6 +49,8 @@ namespace Common
         public const string OCTPUS_SE = "OctpusSE";
         /// <summary>ウェイブシーンのBGM名</summary>
         public const string WAVE_BGM = "WaveBGM";
+        /// <summary>ゲームクリアシーンBGM名</summary>
+        public const string GAME_CLEAR_SCENE_BGM = "GameClearSceneBGM";
     }
 
     // オブジェクト名

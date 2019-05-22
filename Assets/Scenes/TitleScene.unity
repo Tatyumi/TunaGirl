@@ -512,12 +512,14 @@ MonoBehaviour:
   TitleSceneBGM: {fileID: 8300000, guid: f46449efa61ef78459299475258c9677, type: 3}
   GameSceneBGM: {fileID: 8300000, guid: 96da4be63ccac034b8efc903bc84a322, type: 3}
   GameOverSceneBGM: {fileID: 8300000, guid: 07b219177eb8cf94f8a3d75823d3b777, type: 3}
-  GameClearSceneBGM: {fileID: 8300000, guid: 8e433b6103d5fad45a88f5830686e220, type: 3}
+  GameEndSceneBGM: {fileID: 8300000, guid: 8e433b6103d5fad45a88f5830686e220, type: 3}
   TutorialBGM: {fileID: 8300000, guid: ac62d1421baffc549b90ff74bcab610d, type: 3}
   ButtonSE: {fileID: 8300000, guid: 4765ed09f35d06d48b0e9e1168fecefe, type: 3}
   KurageSE: {fileID: 8300000, guid: 6df0ecc8bacf78d44bc737415e14e801, type: 3}
   NetSE: {fileID: 8300000, guid: f6b4dd6a376f0a54fb2d0c6c5bfc05eb, type: 3}
   OctpusSE: {fileID: 8300000, guid: 3f7402266be8e884384e6bbfd99d7250, type: 3}
+  WaveBGM: {fileID: 8300000, guid: 7ab24e36d17f7fa4ea2c50a66a040f9f, type: 3}
+  GameClearSceneBGM: {fileID: 8300000, guid: d432268eda35bd64d9cda56cb10330b3, type: 3}
 --- !u!82 &1516582580
 AudioSource:
   m_ObjectHideFlags: 0
