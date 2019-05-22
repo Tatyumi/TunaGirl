@@ -47,6 +47,8 @@ namespace Common
         public const string NET_SE = "NetSE";
         /// <summary>オクトパスSE名</summary>
         public const string OCTPUS_SE = "OctpusSE";
+        /// <summary>ウェイブシーンのBGM名</summary>
+        public const string WAVE_BGM = "WaveBGM";
     }
 
     // オブジェクト名
