@@ -14,7 +14,7 @@ namespace Common
         /// <summary>ゲームオーバーシーン名</summary>
         public const string GAME_OVER_SCENE = "GameOverScene";
         /// <summary>ウェイブシーン</summary>
-        public const string WAVVE_SCENE = "WaveScene";
+        public const string WAVE_SCENE = "WaveScene";
     }
 
     // タグ名
