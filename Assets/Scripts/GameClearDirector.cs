@@ -34,6 +34,9 @@ public class GameClearDirector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // BGM再生
+        audioManager.PlaySound(Common.AudioName.GAME_CLEAR_SCENE_BGM);
+
         // 待機時間初期化
         waitTime = audioManager.GameClearSceneBGM.length;
 
