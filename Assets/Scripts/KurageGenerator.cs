@@ -3,8 +3,6 @@ using Common;
 
 public class KurageGenerator : MonoBehaviour
 {
-    /// <summary>ゲームディレクターオブジェクト</summary>
-    public GameObject GameDirector;
     /// <summary>キャンバス</summary>
     public GameObject Canvas;
     /// <summary>クラゲプレファブ </summary>
