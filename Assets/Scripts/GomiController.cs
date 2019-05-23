@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Common;
 
 public class GomiController : EnemyController, IKillablePlayer
 {
@@ -23,6 +21,5 @@ public class GomiController : EnemyController, IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Gomi);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

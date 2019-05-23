@@ -1,6 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-using Common;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TsuribariController : EnemyController, IKillablePlayer
 {
@@ -23,6 +21,5 @@ public class TsuribariController : EnemyController, IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Tsuribari);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

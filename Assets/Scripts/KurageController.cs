@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Common;
 
 public sealed class KurageController : EnemyController,IKillablePlayer
 {
@@ -23,6 +21,5 @@ public sealed class KurageController : EnemyController,IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Kurage);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

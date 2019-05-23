@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Common;
 
 
 public sealed class KonbuController : EnemyController,IKillablePlayer
@@ -23,6 +21,5 @@ public sealed class KonbuController : EnemyController,IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Konbu);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

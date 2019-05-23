@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Common;
 
 public class OctpusController : EnemyController, IKillablePlayer
 {
@@ -24,6 +22,5 @@ public class OctpusController : EnemyController, IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Octopus);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

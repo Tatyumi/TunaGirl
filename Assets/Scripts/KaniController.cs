@@ -1,6 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-using Common;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class KaniController : EnemyController, IKillablePlayer
 {
@@ -22,6 +20,5 @@ public class KaniController : EnemyController, IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Kani);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

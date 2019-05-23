@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using Common;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IkaController : EnemyController, IKillablePlayer
 {
@@ -25,6 +21,5 @@ public class IkaController : EnemyController, IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Ika);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

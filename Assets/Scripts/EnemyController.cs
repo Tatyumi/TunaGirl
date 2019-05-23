@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using Common;
 
 public class EnemyController : MonoBehaviour
 {
@@ -41,6 +43,10 @@ public class EnemyController : MonoBehaviour
     /// <param name="category">敵キャラのカテゴリ</param>
     protected void DetectAttackEnemy(int category)
     {
+        // 衝突した敵キャラのカテゴリを取得
         AttackEnemy = category;
+
+        // ゲームオーバーシーンに遷移
+        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }

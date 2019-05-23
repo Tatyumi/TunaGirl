@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Common;
 
 public class NetController : EnemyController,IKillablePlayer
 {
@@ -24,6 +22,5 @@ public class NetController : EnemyController,IKillablePlayer
     public void KillPlayer()
     {
         base.DetectAttackEnemy((int)EnemyCategory.Net);
-        SceneManager.LoadScene(SceneName.GAME_OVER_SCENE);
     }
 }
