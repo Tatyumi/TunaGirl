@@ -416,11 +416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67599746d1db1554e8b9159a17f28578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameDirector: {fileID: 406751759}
-  Player: {fileID: 1169598224}
   Canvas: {fileID: 659296838}
-  OctpusPrefab: {fileID: 1688754801199746, guid: 4559e32abf450c046945644ed1f233c1,
-    type: 2}
+  prefab: {fileID: 1688754801199746, guid: 4559e32abf450c046945644ed1f233c1, type: 2}
+  Player: {fileID: 1169598224}
 --- !u!4 &708654696
 Transform:
   m_ObjectHideFlags: 0
@@ -462,8 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 659296838}
-  KonbuPrefab: {fileID: 1970205014785096, guid: 3d9801898cc560c409e1cb23c0e22446,
-    type: 2}
+  prefab: {fileID: 1970205014785096, guid: 3d9801898cc560c409e1cb23c0e22446, type: 2}
 --- !u!4 &711151703
 Transform:
   m_ObjectHideFlags: 0
@@ -799,9 +796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29bf9fb1082e3bb49a74d18e092caea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameDirector: {fileID: 406751759}
   Canvas: {fileID: 659296838}
-  NetPrefab: {fileID: 1525553649650760, guid: 2e31a6b5ed7424f45a0ce5e7291eaa35, type: 2}
+  prefab: {fileID: 1525553649650760, guid: 2e31a6b5ed7424f45a0ce5e7291eaa35, type: 2}
 --- !u!4 &1298685461
 Transform:
   m_ObjectHideFlags: 0
@@ -918,10 +914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5333be07950e0e64f8560f714b0a16d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameDirector: {fileID: 406751759}
   Canvas: {fileID: 659296838}
-  KuragePrefab: {fileID: 1244601739178934, guid: 649c488ba93706a4d9ccabd894a0ca67,
-    type: 2}
+  prefab: {fileID: 1244601739178934, guid: 649c488ba93706a4d9ccabd894a0ca67, type: 2}
 --- !u!95 &1346320655
 Animator:
   serializedVersion: 3

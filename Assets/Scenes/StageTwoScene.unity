@@ -148,10 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ce2311cf842ca4f8111368efbb96bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 977455435}
   Canvas: {fileID: 583124390}
-  IkaPrefab: {fileID: 1778941286668952, guid: c28e8fd47928ad4468ce393527aa4ecd, type: 2}
-  audioManager: {fileID: 0}
+  prefab: {fileID: 1778941286668952, guid: c28e8fd47928ad4468ce393527aa4ecd, type: 2}
+  Player: {fileID: 977455435}
 --- !u!1 &583124390
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 583124390}
-  GomiPrefab: {fileID: 1365016153157630, guid: c8dcb15d0871bf845894f9576b12cc5b, type: 2}
-  audioManager: {fileID: 0}
+  prefab: {fileID: 1365016153157630, guid: c8dcb15d0871bf845894f9576b12cc5b, type: 2}
 --- !u!224 &653468244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -413,8 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 583124390}
-  KaniPrefab: {fileID: 1286327413913026, guid: 23db44e9416ebe34a9c3e501022bb946, type: 2}
-  audioManager: {fileID: 0}
+  prefab: {fileID: 1286327413913026, guid: 23db44e9416ebe34a9c3e501022bb946, type: 2}
 --- !u!4 &742752360
 Transform:
   m_ObjectHideFlags: 0
@@ -772,9 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 583124390}
-  TsuribariPrefab: {fileID: 1254334551355786, guid: 720c2d04cb06bb041bf0242a0f8cc7fb,
-    type: 2}
-  audioManager: {fileID: 0}
+  prefab: {fileID: 1254334551355786, guid: 720c2d04cb06bb041bf0242a0f8cc7fb, type: 2}
 --- !u!4 &2039076672
 Transform:
   m_ObjectHideFlags: 0

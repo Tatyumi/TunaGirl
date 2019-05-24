@@ -1,59 +1,41 @@
 ﻿using UnityEngine;
 using Common;
 
-public class NetGenerator : MonoBehaviour
+public class NetGenerator : Generator
 {
-    /// <summary>ゲームディレクターオブジェクト</summary>
-    public GameObject GameDirector;
-    /// <summary>キャンバス</summary>
-    public GameObject Canvas;
-    /// <summary>ネットプレファブ </summary>
-    public GameObject NetPrefab;
     /// <summary>出現間隔</summary>
     private float span = 15.0f;
     /// <summary></summary>
     private float delta = 0.0f;
-    /// <summary>ネットプレファブのX座標</summary>
-    private float netPositionX;
     /// <summary>ネットプレファブのY座標</summary>
     private float netPositionY;
-    /// <summary>オーディオマネージャー</summary>
-    public AudioManager audioManager;
 
-    void Awake()
+    private void Awake()
     {
-        audioManager = AudioManager.Instance;
+        // 初期化
+        Initialize();
     }
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
-        // 画面右端の座標を取得
-        netPositionX = Screen.width / 2;
-
         // ネット画像の上辺が画面上と重なるよう計算
-        netPositionY = (Screen.height / 2) - NetPrefab.GetComponent<RectTransform>().sizeDelta.y / 2;
+        netPositionY = (Screen.height / 2) - prefab.GetComponent<RectTransform>().sizeDelta.y / 2;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         this.delta += Time.deltaTime;
 
         // 一定時間たったか判別
         if (this.delta > span)
         {
+            // 初期化
             this.delta = 0.0f;
-            GameObject gameObject = Instantiate(NetPrefab) as GameObject;
 
-            // 生成するオブジェクトをCanVasの子にする
-            gameObject.transform.SetParent(Canvas.transform, false);
-
-            // プレファブを生成
-            gameObject.transform.localPosition = new Vector2(netPositionX, netPositionY);
-
-            // ネット生成時のSEを再生
-            audioManager.PlaySound(AudioName.NET_SE);
+            // ゲームオブジェクトを生成
+            GenerateGameobject(netPositionY,AudioName.NET_SE);
         }
     }
 }

@@ -312,8 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 1933886306}
-  KonbuPrefab: {fileID: 1970205014785096, guid: 3d9801898cc560c409e1cb23c0e22446,
-    type: 2}
+  prefab: {fileID: 1970205014785096, guid: 3d9801898cc560c409e1cb23c0e22446, type: 2}
 --- !u!4 &1038870683
 Transform:
   m_ObjectHideFlags: 0
