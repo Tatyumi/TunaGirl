@@ -6,7 +6,7 @@ public class GomiController : EnemyController, IKillablePlayer
     private const float moveSpeed = 2.0f;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // 上下に揺れながら左に移動
         this.transform.localPosition = new Vector2(transform.localPosition.x - moveSpeed, transform.localPosition.y + Mathf.Sin(Time.time));

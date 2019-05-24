@@ -19,7 +19,7 @@ public class GameEndDirector : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         // ゲームの進行度を初期化
         WaveDirector.progressCount = 0;
@@ -32,7 +32,7 @@ public class GameEndDirector : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // エンドロールが流れ終わったか判別
         if (isEndroll)

@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         minMovePositionY = maxMovePositionY * -1;
     }
 
-    void Update()
+    private void Update()
     {
         // キーボードの↑キーが押されているか判別
         if (Input.GetKey(KeyCode.UpArrow))

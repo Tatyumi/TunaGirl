@@ -4,9 +4,9 @@ public class NetController : EnemyController,IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 15.0f;
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    private void Update ()
     {
         //少しずつ左に移動
         this.transform.position = new Vector3(transform.position.x - moveSpeed, transform.position.y);

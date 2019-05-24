@@ -30,7 +30,7 @@ public class EndrollTextGenerator : MonoBehaviour
 
     }
 
-    void Start()
+    private void Start()
     {
         // エンドロール破棄座標を取得
         DestroyEndrollPositionX = (Screen.width / 2 + endrollTextSize.x / 2) * -1;
@@ -49,7 +49,7 @@ public class EndrollTextGenerator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         this.delta += Time.deltaTime;
 

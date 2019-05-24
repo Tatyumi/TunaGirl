@@ -11,8 +11,7 @@ public class TargetTunaController : MonoBehaviour
         this.transform.localPosition = new Vector2(Screen.width / 2, 0);
     }
 
-
-    void Update()
+    private void Update()
     {
         //少しずつ左に移動
         this.transform.position = new Vector3(transform.position.x - moveSpeed, transform.position.y);

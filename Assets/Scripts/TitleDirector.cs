@@ -19,7 +19,7 @@ public class TitleDirector : MonoBehaviour
         audioManager.PlaySound(AudioName.TITLE_SCENE_BGM);
     }
 
-    void Update()
+    private void Update()
     {
         // 画面がタップされた場合
         if (Input.GetMouseButtonDown(0))

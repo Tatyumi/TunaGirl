@@ -5,7 +5,6 @@ using Common;
 
 public class StageTwoDirector : MonoBehaviour
 {
-
     /// <summary>オーディオソース</summary>
     private AudioManager audioManager;
 
@@ -16,15 +15,9 @@ public class StageTwoDirector : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         // BGMの再生
         audioManager.PlaySound(AudioName.STAGE_TWO_SCENE_BGM);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

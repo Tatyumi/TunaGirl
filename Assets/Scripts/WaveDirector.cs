@@ -55,7 +55,7 @@ public class WaveDirector : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         // BGMの再生
         audioManager.PlaySound(Common.AudioName.WAVE_BGM);
@@ -79,7 +79,6 @@ public class WaveDirector : MonoBehaviour
         // 指定のツナボーイを表示
         tunaBoies.GetChild(WaveDirector.progressCount).gameObject.SetActive(true);
 
-
         string guideComment = null;
         // ゲームの進捗を判別
         if (progressCount == (int)Progress.StageOne)
@@ -99,7 +98,7 @@ public class WaveDirector : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         this.delta += Time.deltaTime;
 
@@ -113,5 +112,4 @@ public class WaveDirector : MonoBehaviour
             SceneManager.LoadScene(nextStageName);
         }
     }
-
 }
