@@ -35,7 +35,7 @@ public class GameClearDirector : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         // BGM再生
         audioManager.PlaySound(Common.AudioName.GAME_CLEAR_SCENE_BGM);
@@ -55,7 +55,7 @@ public class GameClearDirector : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         this.delta += Time.deltaTime;
 
