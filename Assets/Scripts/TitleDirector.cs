@@ -17,9 +17,6 @@ public class TitleDirector : MonoBehaviour
     {
         // BGM再生
         audioManager.PlaySound(AudioName.TITLE_SCENE_BGM);
-
-        // ゲームの進行度を初期化
-        WaveDirector.progressCount = 0;
     }
 
     void Update()

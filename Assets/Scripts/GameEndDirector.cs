@@ -21,6 +21,10 @@ public class GameEndDirector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // ゲームの進行度を初期化
+        WaveDirector.progressCount = 0;
+
+        //  BGM再生
         audioManager.PlaySound(AudioName.GAME_END_SCENE_BGM);
 
         // ガイドテキストを無効
