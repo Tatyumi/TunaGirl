@@ -2,9 +2,8 @@
 using UnityEngine.SceneManagement;
 using Common;
 
-public class GameEndDirector : MonoBehaviour
+public sealed class GameEndDirector : MonoBehaviour
 {
-
     /// <summary>オーディオソース</summary>
     public AudioManager audioManager;
     /// <summary>ガイドテキストオブジェクト</summary>

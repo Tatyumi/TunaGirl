@@ -2,7 +2,7 @@
 using Common;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public sealed class PlayerController : MonoBehaviour
 {
     /// <summary>ゲームディレクターオブジェクト</summary>
     public GameObject GameDirector;

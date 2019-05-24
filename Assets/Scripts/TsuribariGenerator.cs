@@ -1,7 +1,7 @@
 ﻿using Common;
 using UnityEngine;
 
-public class TsuribariGenerator : Generator
+public sealed class TsuribariGenerator : Generator
 {
     /// <summary>出現間隔</summary>
     private float span = 20.0f;

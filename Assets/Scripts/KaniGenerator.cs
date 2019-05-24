@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Common;
 
-public class KaniGenerator : Generator
+public sealed class KaniGenerator : Generator
 {
 
     /// <summary>出現間隔</summary>

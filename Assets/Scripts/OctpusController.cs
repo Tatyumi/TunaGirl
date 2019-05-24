@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class OctpusController : EnemyController, IKillablePlayer
+public sealed class OctpusController : EnemyController, IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private float moveSpeed = 5.0f;

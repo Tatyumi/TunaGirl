@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Common;
 
-public class KurageGenerator : Generator
+public sealed class KurageGenerator : Generator
 {
     /// <summary>出現間隔</summary>
     private float span = 5.0f;

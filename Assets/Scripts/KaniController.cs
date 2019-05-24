@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class KaniController : EnemyController, IKillablePlayer
+public sealed class KaniController : EnemyController, IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 5.0f;

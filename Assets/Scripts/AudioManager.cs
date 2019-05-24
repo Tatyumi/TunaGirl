@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : SingletonMonoBehaviour<AudioManager>
+public sealed class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
     /// <summary>タイトルシーンBGM</summary>
     public AudioClip TitleSceneBGM;

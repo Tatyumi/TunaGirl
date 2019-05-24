@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class NetController : EnemyController,IKillablePlayer
+public sealed class NetController : EnemyController,IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 15.0f;

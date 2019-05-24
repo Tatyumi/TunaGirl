@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Common;
 
 
-public class WaveDirector : MonoBehaviour
+public sealed class WaveDirector : MonoBehaviour
 {
     /// <summary>ゲームの進行度</summary>
     public static int progressCount;

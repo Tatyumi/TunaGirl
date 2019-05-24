@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Common;
 
-public class StageTwoDirector : MonoBehaviour
+public sealed class StageTwoDirector : MonoBehaviour
 {
     /// <summary>オーディオソース</summary>
     private AudioManager audioManager;

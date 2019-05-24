@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TargetTunaController : MonoBehaviour
+public sealed class TargetTunaController : MonoBehaviour
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 0.2f;

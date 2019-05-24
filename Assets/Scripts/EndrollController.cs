@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndrollController : MonoBehaviour
+public sealed class EndrollController : MonoBehaviour
 {
     /// <summary>移動速度</summary>
     private float moveSpeed = 3.0f;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Common;
 
-public class NetGenerator : Generator
+public sealed class NetGenerator : Generator
 {
     /// <summary>出現間隔</summary>
     private float span = 15.0f;

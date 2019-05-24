@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GomiController : EnemyController, IKillablePlayer
+public sealed class GomiController : EnemyController, IKillablePlayer
 {
     /// <summary>移動速度</summary>
     private const float moveSpeed = 2.0f;

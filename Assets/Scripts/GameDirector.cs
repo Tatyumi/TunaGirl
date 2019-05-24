@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Common;
 
-public class GameDirector : MonoBehaviour
+public sealed class GameDirector : MonoBehaviour
 {
     /// <summary>ツナガールオブジェクト</summary>
     public GameObject TunaGirl;

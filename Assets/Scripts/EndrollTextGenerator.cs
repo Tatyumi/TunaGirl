@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EndrollTextGenerator : MonoBehaviour
+public sealed class EndrollTextGenerator : MonoBehaviour
 {
     /// <summary>テキスト表示回数</summary>
     public static int TextCount;
@@ -26,8 +26,8 @@ public class EndrollTextGenerator : MonoBehaviour
 
     private void Awake()
     {
+        // エンドロールテキストのサイズを取得
         endrollTextSize = EndrollText.GetComponent<RectTransform>().sizeDelta;
-
     }
 
     private void Start()

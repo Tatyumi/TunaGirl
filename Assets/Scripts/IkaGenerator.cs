@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Common;
 
-public class IkaGenerator : Generator
+public sealed class IkaGenerator : Generator
 {
     /// <summary>プレイヤーオブジェクト</summary>
     public GameObject Player;

@@ -1,7 +1,7 @@
 ﻿using Common;
 using UnityEngine;
 
-public class GomiGenerator : Generator
+public sealed class GomiGenerator : Generator
 {
     /// <summary>出現間隔</summary>
     private float span = 5.0f;

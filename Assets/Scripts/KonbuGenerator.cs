@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class KonbuGenerator : Generator
+public sealed class KonbuGenerator : Generator
 {
     /// <summary>出現間隔</summary>
     private float span = 1.0f;

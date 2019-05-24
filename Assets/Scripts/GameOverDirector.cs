@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using Common;
 
-public class GameOverDirector : MonoBehaviour
+public sealed class GameOverDirector : MonoBehaviour
 {
     /// <summary>ゲームオーバーオブジェクト</summary>
     public GameObject GameOver;

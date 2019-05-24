@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Common;
 
-public class OctopusGenerator : Generator
+public sealed class OctopusGenerator : Generator
 {
     /// <summary>プレイヤーオブジェクト</summary>
     public GameObject Player;

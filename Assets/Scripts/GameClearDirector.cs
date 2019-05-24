@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Common;
 
-public class GameClearDirector : MonoBehaviour
+public sealed class GameClearDirector : MonoBehaviour
 {
     /// <summary>背景画像オブジェクト</summary>
     public GameObject BackGround;

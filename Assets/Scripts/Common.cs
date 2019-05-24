@@ -1,9 +1,8 @@
-﻿
-// 共通するものを一元管理
+﻿// 共通するものを一元管理
 namespace Common
 {
     // シーン名
-    public class SceneName
+    public sealed class SceneName
     {
         /// <summary>タイトルシーン名</summary>
         public const string TITLE_SCENE = "TitleScene";
@@ -22,7 +21,7 @@ namespace Common
     }
 
     // タグ名
-    public class TagName
+    public sealed class TagName
     {
         /// <summary>ターゲットタグ名</summary>
         public const string TARGET_TAG = "Target";
@@ -31,7 +30,7 @@ namespace Common
     }
 
     // Audioファイル名
-    public class AudioName
+    public sealed class AudioName
     {
         /// <summary>タイトルシーンBGM名</summary>
         public const string TITLE_SCENE_BGM = "TitleSceneBgm";
